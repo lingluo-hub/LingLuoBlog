@@ -5,8 +5,8 @@ const siteMetadata = {
   description: '凌洛的博客',
   language: 'zh-CN',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://blog.lingluoyun.com',
+  siteRepo: 'https://github.com/lingluo-hub/LingLuoBlog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
