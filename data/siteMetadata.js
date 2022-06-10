@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: 'Ling Luo Blog | 凌洛的博客',
   author: 'Ling Luo',
   headerTitle: 'LingLuoBlog',
   description: '凌洛的博客',
@@ -10,7 +10,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
+  email: 'lingluo@lingluoyun.com',
   github: 'https://github.com/lingluo-hub',
   twitter: 'https://twitter.com/lingluocloud',
   // facebook: 'https://facebook.com',
