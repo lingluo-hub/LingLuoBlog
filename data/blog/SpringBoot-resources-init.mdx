@@ -11,7 +11,7 @@ summary: '在我们实际工作中，总会遇到这样需求，在项目启动�
 
 接下来我们就运用案例测试它如何使用，在测试之前在启动类加两行打印提示，方便我们识别 CommandLineRunner 的执行时机。
 
-```java
+```java showLineNumbers
 @SpringBootApplication
 public class CommandLineRunnerApplication {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class CommandLineRunnerApplication {
 
 接下来我们直接创建一个类继承 CommandLineRunner ，并实现它的 run() 方法。
 
-```java
+```java showLineNumbers
 @Component
 public class Runner implements CommandLineRunner {
     @Override
@@ -42,27 +42,18 @@ public class Runner implements CommandLineRunner {
 The service to start.
 
   .   ____          _            __ _ _
-
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-
   '  |____| .__|_| |_|_| |_\__, | / / / /
-
  =========|_|==============|___/=/_/_/_/
-
  :: Spring Boot ::        (v2.0.0.RELEASE)
 
 ...
 
 2018-04-21 22:21:34.706  INFO 27016 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-
 2018-04-21 22:21:34.710  INFO 27016 --- [           main] com.neo.CommandLineRunnerApplication     : Started CommandLineRunnerApplication in 3.796 seconds (JVM running for 5.128)
-
 The Runner start to initialize ...
-
 The service has started.
 
 ```
@@ -75,7 +66,7 @@ The service has started.
 
 第一个实现类：
 
-```java
+```java showLineNumbers
 @Component
 @Order(1)
 public class OrderRunner1 implements CommandLineRunner {
@@ -89,7 +80,7 @@ public class OrderRunner1 implements CommandLineRunner {
 
 第二个实现类：
 
-```java
+```java showLineNumbers
 @Component
 @Order(2)
 public class OrderRunner2 implements CommandLineRunner {
@@ -103,37 +94,26 @@ public class OrderRunner2 implements CommandLineRunner {
 
 添加完成之后重新启动，观察执行顺序：
 
-```java
+```java showLineNumbers
 ...
 
 The service to start.
 
   .   ____          _            __ _ _
-
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-
   '  |____| .__|_| |_|_| |_\__, | / / / /
-
  =========|_|==============|___/=/_/_/_/
-
  :: Spring Boot ::        (v2.0.0.RELEASE)
 
 ...
 
 2018-04-21 22:21:34.706  INFO 27016 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-
 2018-04-21 22:21:34.710  INFO 27016 --- [           main] com.neo.CommandLineRunnerApplication     : Started CommandLineRunnerApplication in 3.796 seconds (JVM running for 5.128)
-
 The OrderRunner1 start to initialize ...
-
 The OrderRunner2 start to initialize ...
-
 The Runner start to initialize ...
-
 The service has started.
 
 ```
